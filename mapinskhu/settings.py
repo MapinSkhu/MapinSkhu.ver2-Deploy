@@ -38,12 +38,13 @@ def get_secret(secret_key, secrets=secrets):
 SECRET_KEY = get_secret("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    ".ap-northeast-2.compute.amazonaws.com",
+    # ".ap-northeast-2.compute.amazonaws.com",
     # "localhost",
-    ".mapinskhu.com"
+    "127.0.0.1",
+    # ".mapinskhu.com"
 ]
 
 
