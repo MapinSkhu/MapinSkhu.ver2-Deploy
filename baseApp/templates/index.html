@@ -4,6 +4,7 @@
 <html lang="ko">
 
 <head>
+    <link rel="stylesheet" href="{% static 'css/theme.css' %}?v=7">
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -27,7 +28,7 @@
 	<meta property="og:description" content="회대인들을 위한 가장 빠르고 간편한 지도">
 	<meta property="og:image" content="{% static 'img/kakao-img.png' %}">
 
-	<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}?v=19">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}?v=27">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
 	<link rel="shortcut icon" href="{% static 'img/maplogo.png' %}">
 	<title>MapinSkhu</title>
@@ -51,7 +52,7 @@
 		<!--main nav bar-->
 		<div class="nav2">
 			<a href="{% url 'index' %}">
-				<img class="nav-img" src="{% static 'img/logo_horizontal.png' %}">
+				<img class="nav-img" src="{% static 'img/logo_horizontal.svg' %}?v=2">
 			</a>
 		</div>
 
@@ -67,7 +68,7 @@
 				<div id="menu__box" class="">
 					<div class="menu_header">
 						<a class="nav-toggle" href="{% url 'index' %}">
-							<img class="nav-img-toggle" src="{% static 'img/logo_horizontal.png' %}">
+							<img class="nav-img-toggle" src="{% static 'img/logo_horizontal.svg' %}?v=2">
 						</a>
 						<svg id="nav_search" onclick="search_show();" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 							<path
@@ -116,15 +117,15 @@
 		<div class="leo_school">
 			<!--맨 위에 있는 요소가 가장 아래에 위치하게 됨-->
 			<div class="leo_class">
-				<img id="leo_1" src="{% static 'img/main/1.png' %}" alt="승연관" onclick="main_1()">
-				<img id="leo_2" src="{% static 'img/main/2.png' %}" alt="일만관" onclick="main_2()">
-				<img id="leo_3" src="{% static 'img/main/3.png' %}" alt="월당관" onclick="main_3()">
-				<img id="leo_5" src="{% static 'img/main/5.png' %}" alt="나눔관" onclick="main_5()">
-				<img id="leo_6" src="{% static 'img/main/6.png' %}" alt="정보과학관" onclick="main_6()">
-				<img id="leo_7" src="{% static 'img/main/7.png' %}" alt="새천년관" onclick="main_7()">
-				<img id="leo_8" src="{% static 'img/main/8.png' %}" alt="중앙도서관" onclick="main_8()">
-				<img id="leo_9" src="{% static 'img/main/9.png' %}" alt="성미가엘성당/피츠버그홀" onclick="main_9()">
-				<img id="leo_11" src="{% static 'img/main/11.png' %}" alt="미가엘관" onclick="main_11()">
+				{% include "includes/map_marker.html" with number="1" label="승연관" %}
+				{% include "includes/map_marker.html" with number="2" label="일만관" %}
+				{% include "includes/map_marker.html" with number="3" label="월당관" %}
+				{% include "includes/map_marker.html" with number="5" label="나눔관" %}
+				{% include "includes/map_marker.html" with number="6" label="정보과학관" %}
+				{% include "includes/map_marker.html" with number="7" label="새천년관" %}
+				{% include "includes/map_marker.html" with number="8" label="중앙도서관" %}
+				{% include "includes/map_marker.html" with number="9" label="성미가엘성당/피츠버그홀" %}
+				{% include "includes/map_marker.html" with number="11" label="미가엘관" %}
 			</div>
 
 			<!--승연관 모달-->

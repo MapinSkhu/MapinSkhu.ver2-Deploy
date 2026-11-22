@@ -1,0 +1,8 @@
+:root {
+  /* Shared brand green: text, icons, borders, and interactive backgrounds. */
+  --guide-accent: #d0f8c8;
+  --brand-green: #38a86a;
+  --new-main-color: var(--brand-green);
+  --text-green: var(--brand-green);
+  --brand-green-shadow: color-mix(in srgb, var(--brand-green) 37%, transparent);
+}
