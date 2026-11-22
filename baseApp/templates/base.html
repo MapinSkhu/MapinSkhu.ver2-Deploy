@@ -17,6 +17,7 @@
       gtag("config", "G-X6B154FM93");
     </script>
 
+    <link rel="stylesheet" href="{% static 'css/theme.css' %}?v=7" />
     {% block link %}{% endblock %}
     <meta charset="UTF-8" />
     <meta
@@ -26,12 +27,12 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="{% static 'css/build.css' %}?v=81"
+      href="{% static 'css/build.css' %}?v=100"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="{% static 'css/search.css' %}?v=30"
+      href="{% static 'css/search.css' %}?v=32"
     />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -94,7 +95,7 @@
                 <a href="{% url 'index' %}">
                   <img
                     class="nav-img menu_img"
-                    src="{% static 'img/logo_horizontal.png' %}"
+                    src="{% static 'img/logo_horizontal.svg' %}?v=2"
                   />
                 </a>
                 <!--고친부분-->
@@ -173,7 +174,7 @@
         </div>
         <div class="nav2">
           <a href="{% url 'index' %}">
-            <img class="nav-img" src="{% static 'img/logo_horizontal.png' %}" />
+            <img class="nav-img" src="{% static 'img/logo_horizontal.svg' %}?v=2" />
           </a>
         </div>
       </div>

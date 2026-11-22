@@ -1,0 +1,9 @@
+<svg id="leo_{{ number }}" class="map-marker" xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 100 122.797115" width="100" height="122.797115"
+     role="button" tabindex="0" aria-label="{{ label }}"
+     onclick="main_{{ number }}()"
+     onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); main_{{ number }}(); }">
+  <path fill="#A9EA89" d="M50 0 C77.614 0 100 22.386 100 50 C100 63.261 94.732 75.979 85.355 85.355 L50 122.797115 L14.645 85.355 C5.268 75.979 0 63.261 0 50 C0 22.386 22.386 0 50 0Z"/>
+  <circle cx="50" cy="50" r="34" fill="#fff"/>
+  <text class="map-marker-number" x="50" y="50" dy=".35em" text-anchor="middle">{{ number }}</text>
+</svg>

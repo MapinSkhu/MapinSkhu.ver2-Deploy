@@ -9,15 +9,9 @@ function setVersionExpanded(button, expanded) {
 
 function resetExpandedContents() {
   document.querySelectorAll(".item-button").forEach((button) => {
-    const content = button.nextElementSibling;
-
     button.classList.remove("active_content");
-    if (!content) return;
-
-    content.style.maxHeight = "0px";
-    content.style.borderTop = "solid 1px #e9e9e9";
-    content.style.borderBottom = "none";
-    content.style.marginBottom = "-1px";
+    const content = button.nextElementSibling;
+    if (content) content.style.maxHeight = "0px";
   });
 }
 
@@ -26,10 +20,8 @@ function closeVersionContent(button) {
   if (!button || !content) return;
 
   button.classList.remove("active_content");
+  // The body's permanent bottom border travels upward with its height.
   content.style.maxHeight = "0px";
-  content.style.borderTop = "solid 1px #e9e9e9";
-  content.style.borderBottom = "none";
-  content.style.marginBottom = "-1px";
 }
 
 function openVersionContent(button) {
@@ -37,9 +29,6 @@ function openVersionContent(button) {
   if (!content) return;
 
   button.classList.add("active_content");
-  content.style.borderTop = "none";
-  content.style.borderBottom = "solid 1px #D8FDD1";
-  content.style.marginBottom = "0px";
   content.style.maxHeight = `${content.scrollHeight}px`;
 }
 

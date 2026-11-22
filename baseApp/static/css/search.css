@@ -29,11 +29,11 @@
   width: 100%;
   height: 4.5vw;
   background-color: #d3f0b1;
-  box-shadow: #3cb3715e 0px 4px 12px;
+  box-shadow: var(--brand-green-shadow) 0px 4px 12px;
   border: 0;
   font-family: "SuncheonR";
   font-size: 1.8vw;
-  color: var(--new-main-color);
+  color: var(--text-green);
   border-radius: 5vw;
   padding: 0.3vw 5vw 0.3vw 2vw; /* pdding이든 margin이든 상우하좌로 시계방향 */
 }
@@ -44,7 +44,7 @@ input:-webkit-autofill {
 
 /* 검색 유도 문구 */
 .main_input::placeholder {
-  color: var(--new-main-color);
+  color: var(--text-green);
 }
 
 input:focus {
@@ -64,7 +64,7 @@ input:focus {
 
 /* nav 돋보기 */
 .search_item_frame {
-  background-color: #006600;
+  background-color: var(--brand-green);
 }
 
 #nav_search {
@@ -167,7 +167,7 @@ input:focus {
   max-width: calc(100% - 1.5rem);
   padding: 1.1rem 2.8rem;
   transform: translateX(-50%);
-  color: var(--new-main-color);
+  color: var(--text-green);
   font-size: clamp(1.2rem, 2vw, 1.65rem);
   font-weight: 700;
   line-height: 1.2;
